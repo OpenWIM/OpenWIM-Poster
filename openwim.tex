@@ -1,0 +1,206 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% a0poster Portrait Poster
+% LaTeX Template
+% Version 1.0 (22/06/13)
+%
+% The a0poster class was created by:
+% Gerlinde Kettl and Matthias Weiser (tex@kettl.de)
+% 
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% http://www.latextemplates.com/template/a0poster-portrait-poster
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a0,portrait]{a0poster}
+
+\usepackage{multicol} % This is so we can have multiple columns of text side-by-side
+\columnsep=100pt % This is the amount of white space between the columns in the poster
+\columnseprule=3pt % This is the thickness of the black line between the columns in the poster
+
+\usepackage[svgnames]{xcolor} % Specify colors by their 'svgnames', for a full list of all colors available see here: http://www.latextemplates.com/svgnames-colors
+
+\usepackage{times} % Use the times font
+%\usepackage{palatino} % Uncomment to use the Palatino font
+
+\usepackage{graphicx} % Required for including images
+\graphicspath{{figures/}} % Location of the graphics files
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+\usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
+\usepackage{wrapfig} % Allows wrapping text around tables and figures
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	POSTER HEADER 
+%----------------------------------------------------------------------------------------
+
+% The header is divided into two boxes:
+% The first is 75% wide and houses the title, subtitle, names, university/organization and contact information
+% The second is 25% wide and houses a logo for your university/organization or a photo of you
+% The widths of these boxes can be easily edited to accommodate your content as you see fit
+
+\begin{minipage}[b]{0.75\linewidth}
+\veryHuge \color{black} \textbf{OpenWIM} \color{Black}\\ % Title
+\Huge\textit{Open Science and Weigh in Motion Research}\\[2cm] % Subtitle
+\huge \textbf{Ivan Ogasawara*, Independent Researcher, Brazil}\\[0.5cm] % Author(s)
+\huge Helio Goltsman**, Senior Research Engineering, Brazil\\[0.4cm] % University/organization
+\Large \texttt{*ivan.ogasawara@gmail.com, **hgoltsman@gmail.com}\\
+\end{minipage}
+%
+%\begin{minipage}[b]{0.25\linewidth}
+%\includegraphics[width=20cm]{logo.png}\\
+%\end{minipage}
+
+%\vspace{1cm} % A bit of extra whitespace between the header and poster content
+
+%----------------------------------------------------------------------------------------
+
+\begin{multicols}{2} % This is how many columns your poster will be broken into, a portrait poster is generally split into 2 columns
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+%\color{black} % Navy color for the abstract
+%\begin{abstract}
+%Although there are many papers publicly available about weigh-in-motion, a little bit researchers publish their sources and data, which could allow a better reproduction of their experiments and results. In this context, the Open Science concept can help improve the WIM research through collaborative efforts and reproducible methods, using algorithms and data with open access.\\
+%
+%The OpenWIM project was born upon this background as an open science initiative, to provide a WIM researchers a repository with initial structure that can then be converted into a framework for researchers to develop and test new methods and technologies.
+%
+%\end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\color{black} % SaddleBrown color for the introduction
+\Large
+
+\section*{Introduction}
+
+The proposal of the OpenWIM Project is to create an open environment to support WIM researchers to improve their research using open science concepts.\\
+
+Open Science happens when 3 components are openly accessible:\\
+
+\begin{itemize}
+\item their publications (Open Access);
+\item their algorithms (Open Source) and;
+\item their data (Open Data).
+\end{itemize}
+
+To extend the benefits, it is important to work on:\\
+
+\begin{itemize}
+\item design standards;
+\item a guideline to support researchers to implement open science concepts.
+\end{itemize}
+
+At the end, the OpenWIM repository can be used by other researchers to store their research and other scientific communications in a centralized way.\\
+
+%----------------------------------------------------------------------------------------
+%	OBJECTIVES
+%----------------------------------------------------------------------------------------
+
+\color{black} % DarkSlateGray color for the rest of the content
+
+\section*{Open Access}
+
+\begin{wrapfigure}{l}{0.21\textwidth}
+  \begin{center}
+    \includegraphics[width=500px]{openaccess.png}
+  \end{center} 
+  \caption{Open Access}
+\end{wrapfigure}
+
+One of the main ideas behind the use of open science communication is to maximize research paper reuse and reduce their costs.\\
+
+An openly accessible paper publishing can offer benefits like  the increasing of visibility and the impact factor (IF), the promotion of collaborative work, etc.\\
+
+Most of the time, when researchers need to publish their paper in a subscription journal, they can publish pre-prints or post-prints (or both) on Open Journals.\\
+
+%----------------------------------------------------------------------------------------
+%	MATERIALS AND METHODS
+%----------------------------------------------------------------------------------------
+
+\section*{Open Source}
+
+The algorithms play a very important role in research development. They allow some processes that, if done manually, would be impossible in reasonable time. Not only can the article be published but also the source code (e.g. http://www.pythonpapers.org). \\
+
+\begin{wrapfigure}{r}{0.21\textwidth}
+  \begin{center}
+    \includegraphics[width=500px]{opensource.png}
+  \end{center} 
+  \caption{Open Source Initiative}
+\end{wrapfigure}
+
+Publishing the source code allows other researchers to use it and cite it. Algorithms are also a scientific product and should be published. To improve reproducibility, an open programming language should be chosen and, additionally, an open notebook science (e.g. http://jupyter.org) can be used to allow an easy way to share and show algorithms and results.\\
+
+\section*{Open Data}
+
+Most studies use some kind of data. Standardizing and sharing data can be very useful. Some fields, like astronomy, have some data format defined to improve data sharing, processing and storage  (e.g. FITS, NetCDF, HDF5, etc). \\
+
+In weigh-in-motion field, would be a repository with raw sensor data from research with additional information in a standard format. That will help other researchers to verify some aspects of their methods. Like the source code, the data can be reused and cited by other researchers.\\
+
+\begin{wrapfigure}{l}{0.21\textwidth}
+  \begin{center}
+    \includegraphics[width=500px]{opendata.png}
+  \end{center} 
+  \caption{Open Data}
+\end{wrapfigure}
+
+Some important repositories are: 
+
+\begin{itemize}
+\item Havard Dataverse;
+\item Figshare;
+\item Dryad.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	RESULTS 
+%----------------------------------------------------------------------------------------
+
+\section*{Discussion}
+
+Until this moment, no study about the applicability of open science concepts in weigh-in-motion research can be found in literatures, so we do not have any information about the differences between traditional research and open research in this field. Although, some initiatives in this field are very important, such as:\\
+
+
+\begin{itemize}
+\item disseminating the importance of open science methodology;
+\item disseminating information about communication platforms;
+\item offering support and training about computational techniques.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSIONS
+%----------------------------------------------------------------------------------------
+
+\color{black} % SaddleBrown color for the conclusions to make them stand out
+
+\section*{Conclusions}
+
+When more researchers on the weigh-in-motion field understand the benefits about the use of open science methodology, more scientific communications will be openly available, allowing more reproducibility and collaborative work. Other fields are already more advanced in implementing the concept of open science and they can be used as reference to help weigh-in-motion researchers understand this methodology.
+
+ %----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+
+\nocite{*} % Print all references regardless of whether they were cited in the poster or not
+\bibliographystyle{plain} % Plain referencing style
+\bibliography{openwim} % Use the example bibliography file sample.bib
+
+\end{multicols}
+
+2016, OGASSAVARA, Ivan and GOLTSMAN, Helio. Licensed under the Creative Commons Attribution 4.0 license, http://creativecommons.org/licenses/by/4.0/
+
+\end{document}
